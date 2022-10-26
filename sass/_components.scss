@@ -47,35 +47,42 @@
 	}
 }
 
+
+.section-heading {
+	position:relative;
+	margin-bottom: 2em;
+	font-size: 3rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
+	color: $main-color;
+	letter-spacing: 2px;
+
+}
+.section-padding {
+	padding: 6em 2em;
+}
+
+
+
 //========================
 //MEDIA
 //=======================
 
-@media (min-width: 768px) {
-	.white-block {
-		height: 55px;
-		width: 45%;
+@media(mid-width:768px) {
+	.section-heading{
+		font-size: 3.6rem;
 	}
-	.header {
-		&__heading {
-			font-size: 6.6rem;
-		}
-
-		&__text {
-			font-size: 2.2rem;
-		}
-		&__btn {
-			font-size: 1.6rem;
-		}
+	.section-padding{
+		font-size: 8em 2em
 	}
 }
 
-@media (min-width: 992px) {
-	.burger-btn {
-		top: 50px;
-		right: 50px;
+@media(mid-width:992px) {
+	.section-heading{
+		font-size: 4.8rem;
 	}
-	.header {
-		background-image: $blue-gradient, url(../img/palm1920.jpg);
+	.section-padding{
+		font-size: 10em 2em
 	}
 }

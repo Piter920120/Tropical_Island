@@ -76,12 +76,12 @@ body {
 	height: 100vh;
 	width: 100%;
 	transform: translateX(100%);
-	transition: .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 	background-image: $blue-gradient-solid;
 	z-index: 100;
 
-	&--active{
-		transform:translateX(0);
+	&--active {
+		transform: translateX(0);
 	}
 
 	&__item {
@@ -120,7 +120,6 @@ body {
 }
 .nav-items-animation {
 	animation: navItemsAnimation 1s;
-	
 }
 
 //header
@@ -159,6 +158,114 @@ body {
 
 		&::before {
 			background-color: $light-white;
+		}
+	}
+}
+//Main
+//Dreams Scetion
+
+.dreams {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 2em 0;
+	}
+	&__img {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	&__tittle {
+		margin-bottom: 0.5em;
+	}
+	&__text {
+		font-size: 1.4em;
+	}
+}
+
+//========================
+//MEDIA
+//=======================
+@media (min-width: 576px) {
+	.dreams {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-text {
+				width: 55%;
+
+				&--right {
+					text-align: right;
+				}
+			}
+			&-img {
+				width: 40%;
+
+				&--right {
+					order: 1;
+				}
+			}
+		}
+		&__img {
+			margin-bottom: 0;
+			max-height: 300px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.white-block {
+		height: 55px;
+		width: 45%;
+	}
+	.header {
+		&__heading {
+			font-size: 6.6rem;
+		}
+
+		&__text {
+			font-size: 2.2rem;
+		}
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+	.dreams {
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.burger-btn {
+		top: 50px;
+		right: 50px;
+	}
+	.header {
+		background-image: $blue-gradient, url(../img/palm1920.jpg);
+	}
+	.nav{
+		&__item{
+			font-size: 4.8rem;
+		}
+	}
+	.dreams {
+		&__box {
+			margin: 5em 0;
+
+			&__text{
+				display:flex;
+				flex-direction:column;
+				justify-content: flex-end;
+				margin-bottom: 2.5em;
+			}
+		}
+
+		&__title {
+			font-size: 3.6rem;
+		}
+		&__text {
+			font-size:2.2rem;
 		}
 	}
 }

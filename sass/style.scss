@@ -206,7 +206,6 @@ body {
 
 .islands {
 	&__card {
-		
 		position: relative;
 		margin: 1em 0;
 		height: 450px;
@@ -258,7 +257,6 @@ body {
 			}
 		}
 		&-info {
-			
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -275,19 +273,17 @@ body {
 
 			&-title {
 				@include islandCardStyle;
-				top: .2em;
+				top: 0.2em;
 				font-family: 'Dancing Script', cursive;
 				font-size: 2.8rem;
 			}
 
 			&-list {
-				
 				margin: 0 auto;
 				width: 70%;
 				list-style: none;
 
 				&-item {
-		
 					padding: 0.5em;
 					font-size: 1.4rem;
 					border-bottom: 1px solid $light-white;
@@ -315,66 +311,202 @@ body {
 	}
 }
 
-
 //offers
 
-.offers{
+.offers {
 	position: relative;
 	@include heroImages('../img/maldives-3220702_640.jpg');
-		overflow: hidden;
-	
+	overflow: hidden;
+
 	.section-heading {
 		color: $pure-white;
 	}
 
-	&__option{
+	&__option {
 		margin: 1em 0;
-		box-shadow: 5px 5px 10px rgba(46,46,46,0.18);
+		box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
 		background-color: $pure-white;
-		
 
-		&-img{
+		&-img {
 			width: 100%;
-			transition:transform .3s;
+			transition: transform 0.3s;
 
-			&:hover{
+			&:hover {
 				transform: scale(1.1);
 			}
 		}
-		&-info{
+		&-info {
 			padding: 2em;
-		
 		}
-		&-heading{
+		&-heading {
 			margin-bottom: 0.5em;
-			font-size:2.4rem;
+			font-size: 2.4rem;
 			font-weight: 300;
 		}
 
-		&-text{
+		&-text {
 			margin-bottom: 0.5em;
 			font-size: 1.3rem;
 			color: $dark;
 		}
 
-		&-btn{
+		&-btn {
 			margin-bottom: 1em;
 			padding: 0.8em;
 			width: 100%;
 			color: $pure-white;
-			background-color:  $main-color;
-			border:none;
+			background-color: $main-color;
+			border: none;
 			border-radius: 8px;
-			cursor:pointer;
+			cursor: pointer;
 
-
-			&::before{
-				background-color:  $secondary-color;
+			&::before {
+				background-color: $secondary-color;
 			}
 		}
 	}
 }
+//reviews
 
+@media (max-width: 767px) {
+	.reviews.section-padding {
+		padding: 6em 0;
+	}
+}
+.reviews {
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.18);
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(0.95);
+		}
+	}
+	&__box-img {
+		position: absolute;
+		top: 8%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+
+		img {
+			width: 80px;
+			height: 80px;
+			object-fit: vocer;
+			border-radius: 50%;
+		}
+	}
+
+	&__box-quote {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		color: $main-color;
+	}
+
+	&__box-text {
+		margin-bottom: 1em;
+		font-size: 1.4rem;
+		color: $dark;
+	}
+}
+
+//contact
+
+.contact {
+	position: relative;
+	background-color: $light-white;
+	overflow: hidden;
+
+	.white-block-left {
+		background-color: $dark;
+	}
+
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+
+	&__form-input {
+		@include contactForm;
+	}
+	&__form-textarea {
+		@include contactForm;
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+		min-height: 150px;
+	}
+
+	&__form-btn {
+		align-self: flex-end;
+		padding: 1em;
+		width: 100%;
+		max-width: 300px;
+		color: $pure-white;
+		border: none;
+		border-radius: 8px;
+		background-color: $main-color;
+		cursor: pointer;
+
+		&::before {
+			background-color: $secondary-color;
+		}
+	}
+}
+
+//footer
+
+.footer {
+	color: $pure-white;
+	background-color: $dark;
+
+	.wrapper {
+		padding: 6em 2em 2em;
+	}
+	&__box {
+		font-size: 1.4rem;
+	}
+
+	&__box-desktop {
+		display: none;
+	}
+	&__box-title {
+		margin-bottom: 1em;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+	&__box-social {
+		margin: 2em 0 1em;
+	}
+	&__box-link{
+		color:$pure-white;
+		font-size: 3.6em;
+		padding: 0 .3em;
+		text-decoration: none;
+		transition: color .3s;
+
+		&:first-child{
+			padding-left: 0;
+		}
+
+		&:hover{
+			color: $light-white;
+		}
+	}
+	&__bottom-text{
+		padding: 2em;
+		text-align: center;
+	}
+}
 //========================
 //MEDIA
 //=======================
@@ -405,38 +537,35 @@ body {
 		}
 	}
 
-	.offers{
-		&__option{
-			display:flex;
+	.offers {
+		&__option {
+			display: flex;
 			margin: 2em 0;
 			width: 100%;
 
-			&-img{
+			&-img {
 				width: 50%;
 				height: auto;
 
-
-				&--right{
-					order:1;
+				&--right {
+					order: 1;
 				}
 			}
-			&-info{
+			&-info {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
 			}
 
-			&-heading{
+			&-heading {
 				margin-bottom: 0.5em;
 				font-size: 3.6rem;
 			}
 
-			&-btn{
+			&-btn {
 				padding: 1em;
 			}
 		}
-
-		
 	}
 }
 
@@ -479,9 +608,44 @@ body {
 			justify-content: center;
 			flex-wrap: wrap;
 		}
-		&__card{
+		&__card {
 			margin: 1em;
 			width: 45%;
+		}
+	}
+	.footer{
+
+		&__boxes{
+			display: flex;
+			justify-content: space-between;
+		}
+		&__box-desktop{
+			display:block;
+		}
+		&__box{
+			margin: 0 2em;
+			width: 25%;
+
+			&:first-child{
+			width: 50%;	
+			}
+		}
+		&__box-title{
+			font-size: 2.4rem;
+		}
+
+		&__box-list{
+			list-style:none;
+		}
+
+		&__box-list-item{
+			margin-bottom: 1em;
+			
+			a{
+				color: $light-white;
+				text-decoration: none;
+			}
+
 		}
 	}
 }
@@ -529,29 +693,23 @@ body {
 			}
 		}
 	}
-	.offers{
-		background-image:$blue-gradient url('../img/maldives-3220702_1920.jpg');
-
+	.offers {
+		background-image: $blue-gradient url('../img/maldives-3220702_1920.jpg');
 
 		&__option {
-			
-			&-img{
+			&-img {
 				object-fit: cover;
-				
 			}
-			&-text{
+			&-text {
 				font-size: 1.5rem;
 			}
 		}
 	}
 }
-@media(min-width:1100px)
-{
-	.islands{
-			
-		&__card{
+@media (min-width: 1100px) {
+	.islands {
+		&__card {
 			width: 29%;
-			
 		}
 	}
 }

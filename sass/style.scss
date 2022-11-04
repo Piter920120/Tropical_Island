@@ -18,6 +18,8 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
 }
+
+
 //NAV
 
 .burger-btn {
@@ -121,7 +123,11 @@ body {
 .nav-items-animation {
 	animation: navItemsAnimation 1s;
 }
-
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before{
+	background-color: $dark;
+}
 //header
 
 .header {
